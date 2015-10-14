@@ -213,8 +213,8 @@ a.join-practice-btn {
 								<i class="fa fa-file-text"></i>
 							</div>
 							<div class="select-test-content">
-								<h3 class="title">模拟考试</h3>
-								<p>根据最新大纲的考查要求为你自动生成的模拟卷</p>
+								<h3 class="title">开始考试</h3>
+								<p>根据最新考查要求为你自动生成试卷</p>
 								<a class="btn btn-primary" data-toggle="modal"
 									data-target=".practice-exampaper-modal"><i
 									class="fa fa-arrow-right"></i>参加测验</a>

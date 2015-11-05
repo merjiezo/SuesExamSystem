@@ -83,15 +83,13 @@ a.join-practice-btn {
 
 <body>
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-5"></div>
-				<div class="col-xs-7" id="login-info">
+	<div class="container">
+		<div class="row">
+				<div class="col-xs-12" id="login-info">
 					<c:choose>
 						<c:when
 							test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
 							<div id="login-info-user">
-
 								<a
 									href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}"
 									id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
@@ -105,19 +103,17 @@ a.join-practice-btn {
 						</c:otherwise>
 					</c:choose>
 				</div>
-			</div>
 		</div>
+	</div>
 	</header>
 	<!-- Navigation bar starts -->
 
 	<div class="navbar bs-docs-nav" role="banner">
-		<div class="container">
 			<nav class="collapse navbar-collapse bs-navbar-collapse"
 				role="navigation">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="home"><i class="fa fa-home"></i>主页</a>
 					</li>
-					<li><a href="start-exam"><i class="fa fa-edit"></i>试题练习</a></li>
 					<li><a href="student/usercenter"><i
 							class="fa fa-dashboard"></i>会员中心</a></li>
 					<li><a href="student/setting"><i class="fa fa-cogs"></i>个人设置</a>
@@ -128,21 +124,6 @@ a.join-practice-btn {
 	</div>
 
 	<!-- Navigation bar ends -->
-
-	<!-- Slider starts -->
-
-	<div class="full-slider">
-		<!-- Slider (Flex Slider) -->
-
-		<div class="container">
-			<div class="row">
-				<div class="flexslider">
-				<br><br>
-					<p style="text-align: center; font-size: 25px;">欢迎光临易班在线测试中心</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="content" style="margin-bottom: 100px;">
 
 		<div class="container">
@@ -156,7 +137,7 @@ a.join-practice-btn {
 								<i class="fa fa-cloud-upload"></i>
 							</div>
 							<div class="select-test-content">
-								<h3 class="title">强化练习</h3>
+								<h3 class="title">练习一下</h3>
 								<p>自主选择具体考点，各个击破</p>
 								<a class="btn btn-primary" data-toggle="modal"
 									data-target=".levelup-practice-modal"><i
@@ -255,10 +236,7 @@ a.join-practice-btn {
 
 	</div>
 	<footer>
-		<div class="container">
-			<div class="row">
 				<div class="col-md-12">
-					<div class="copy">
 						<p>
 							SuesMinTech Copyright © <a href="http://www.yiban.cn/"
 								target="_blank">yiban</a> - <a href="." target="_blank">主页</a> |
@@ -266,11 +244,8 @@ a.join-practice-btn {
 								href="http://www.yiban.cn/" target="_blank">FAQ</a> | <a
 								href="http://www.yiban.cn/" target="_blank">联系我们</a>
 						</p>
-					</div>
 				</div>
-			</div>
 
-		</div>
 
 	</footer>
 

@@ -478,6 +478,10 @@ a.navi-item-error{
 	user-select: none;
 }
 
+#exampaper-footer {
+	height: 130px!important;
+}
+
 
 /** comment **/
 .comment-list{

@@ -17,6 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
 		<title>练习历史</title>
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="keywords" content="">
@@ -32,27 +33,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-5">
-						<div class="logo">
-							<h1><a href="#"><img alt="" src="resources/images/logo.png"></a></h1>
+						<div class="col-xs-12" id="login-info">
+							<c:choose>
+								<c:when
+									test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
+									<div id="login-info-user">
+										<a
+											href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}"
+											id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
+										<span>|</span> <a href="j_spring_security_logout"><i
+											class="fa fa-sign-out"></i> 退出</a>
+									</div>
+								</c:when>
+								<c:otherwise>
+									<a class="btn btn-primary" href="user-register">用户注册</a>
+									<a class="btn btn-success" href="user-login-page">登录</a>
+								</c:otherwise>
+							</c:choose>
 						</div>
-					</div>
-					<div class="col-xs-7" id="login-info">
-						<c:choose>
-							<c:when test="${not empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
-								<div id="login-info-user">
-									
-									<a href="user-detail/${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}" id="system-info-account" target="_blank">${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}</a>
-									<span>|</span>
-									<a href="j_spring_security_logout"><i class="fa fa-sign-out"></i> 退出</a>
-								</div>
-							</c:when>
-							<c:otherwise>
-								<a class="btn btn-primary" href="user-register">用户注册</a>
-								<a class="btn btn-success" href="user-login-page">登录</a>
-							</c:otherwise>
-						</c:choose>
-					</div>
 				</div>
 			</div>
 		</header>
@@ -64,9 +62,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<ul class="nav navbar-nav">
 						<li>
 							<a href="home"><i class="fa fa-home"></i>主页</a>
-						</li>
-						<li>
-							<a href="start-exam"><i class="fa fa-edit"></i>试题练习</a>
 						</li>
 						<li class="active">
 							<a href="student/usercenter"><i class="fa fa-dashboard"></i>会员中心</a>
@@ -89,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="container" style="min-height:500px;">
 
 				<div class="row">
-					<div class="col-xs-3">
+					<div class="col-xs-12">
 						<ul class="nav default-sidenav">
 							<li>
 								<a href="student/usercenter"> <i class="fa fa-dashboard"></i> 用户中心 </a>
@@ -102,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</li>
 						</ul>
 					</div>
-					<div class="col-xs-9">
+					<div class="col-xs-12">
 						<div class="page-header">
 							<h1><i class="fa fa-history"></i> 练习历史</h1>
 						</div>
@@ -157,21 +152,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="copy">
-							<p>
-								Exam++ Copyright © <a href="http://www.examxx.net/" target="_blank">Exam++</a> - <a href="." target="_blank">主页</a> | <a href="http://www.examxx.net/" target="_blank">关于我们</a> | <a href="http://www.examxx.net/" target="_blank">FAQ</a> | <a href="http://www.examxx.net/" target="_blank">联系我们</a>
-							</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</footer>
+	<footer>
+		<div class="col-md-12">
+			<p>SuesMinTech Copyright © <a href="http://www.yiban.cn/"
+			target="_blank">yiban</a> - <a href="." target="_blank">主页</a> |
+			<a href="http://www.yiban.cn/" target="_blank">关于我们</a> | <a
+			href="http://www.yiban.cn/" target="_blank">FAQ</a> | <a
+			href="http://www.yiban.cn/" target="_blank">联系我们</a>
+			</p>
+		</div>
+	</footer>
 
 		<!-- Slider Ends -->
 

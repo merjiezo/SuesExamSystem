@@ -122,9 +122,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<a href="admin/question-add"> <i class="fa fa-pencil-square-o"></i> 添加试题 </a>
 							</li>
 							<li>
-								<a href="admin/question-import"> <i class="fa fa-cloud-upload"></i> 导入试题 </a>
+								<a href="admin/question-import"> <i class="fa "></i> 导入试题 </a>
 							</li>
-						</ul>
+						</ul>fa-cloud-upload
 					</div>
 					<div class="col-xs-9">
 						<div class="page-header">

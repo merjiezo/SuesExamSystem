@@ -369,7 +369,7 @@ form label {
 }
 
 .container {
-	max-width: 960px;
+	width: 100%;
 }
 
 /* Header */
@@ -2253,7 +2253,7 @@ header {
 }
 
 #login-info{
-	text-align:right;
+	text-align:left;
 }
 
 #login-info-user a{
@@ -2486,7 +2486,7 @@ ul.default-sidenav li.active a{
 }
 
 #login-info-user{
-	float: right;
+	float: left;
 	background-color: #1ba1e2;
 	color: #FFF;
 	padding: 2px 14px 1px 14px;
